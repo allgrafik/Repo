@@ -1,0 +1,42 @@
+// ==================================================
+// Brand Easy customer styling (styling.less)
+// ==================================================
+
+// Load application and Brand Easy default styling
+//@import '../../../site/assets/less/templates/brandeasy-@{theme}.less';
+@import '/var/www/html/brandeasy/site/assets/less/templates/brandeasy-@{theme}.less';
+// --------------------------------------------------
+// 1. Customer base settings
+// --------------------------------------------------
+
+// Customer name (should be same as directory name)
+@customerName: kundx;
+
+// Theme (light or dark)
+@theme: light;
+
+// Logo width & height (max 180px & 50px)
+@logoWidth: 174px;
+@logoHeight: 35px;
+
+// Background color
+@backgroundColor: #fff;
+
+// Primary color (links)
+@primaryColor: #7ab60e;
+
+// Secondary color (headers)
+@secondaryColor: #7ab60e;
+
+// Border radius (curved corners, 0px or 4-6px is optimal)
+@borderRadius: 4px;
+
+// // --------------------------------------------------
+// // 2. Customer custom variables
+// // --------------------------------------------------
+
+// // You can copy variables from mediastore-variables.less or 
+// // customer-variables.less and replace their values here.
+
+@bodyBackgroundImage:       url('background.png');
+@ms2SiteLogoPrimary:        url('logo.png');
