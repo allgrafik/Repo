@@ -11,13 +11,13 @@
  */
 
 // Hide Monitor webshop
-// $config['vcmp']['pages']['home']['content']['webshop'] = null;
+$config['vcmp']['pages']['home']['content']['webshop'] = null;
 
 // Hide NAV webshop
 $config['vcmp']['pages']['home']['content']['nav'] = null;
 
 // Hide Visma webshop
-$config['vcmp']['pages']['home']['content']['visma'] = null;
+//$config['vcmp']['pages']['home']['content']['visma'] = null;
 
 // Hide workflow
 $config['vcmp']['pages']['home']['content']['workflow'] = null;
