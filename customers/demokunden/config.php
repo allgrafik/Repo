@@ -11,8 +11,6 @@
  */
 
 
-
-
 $config['vcmp']['settings'] = array(
 
     'override_portalgroup' => true,
@@ -75,6 +73,7 @@ $config['vcmp']['pages']['home'] = array(
                 $customer.'_admingroup',
                 $customer.'_usergroup',
                 $customer.'_admingroup_fi',
+		$customer.'_admingroup_en',
                 $customer.'_guestgroup',
 		),
             // 'write'     => array(),
@@ -91,8 +90,6 @@ $config['vcmp']['pages']['home'] = array(
                 'bf_projectgroup',
                 'bf_designgroup',
 		'brandeasy_workflowgroup',
-                //$customer.'_admingroup',
-                //$customer.'_admingroup_fi',
             ),
             'icon'          => '',
             'content'       => 'workflow',
@@ -110,7 +107,7 @@ $config['vcmp']['pages']['home'] = array(
             'description'   => 'Bilder, dokument och andra filer.',
             'read'          => array(
                 $internal.'_sysadmingroup',
-                $customer.'_admingroup',
+                $customer.'_admingroup_en',
                 $customer.'_admingroup_fi',
                 $customer.'_usergroup'
             ),
@@ -153,7 +150,7 @@ $config['vcmp']['pages']['home'] = array(
             'description'   => 'Beställ trycksaker och andra produkter.',
             'read'          => array(
                 $internal.'_sysadmingroup',
-                $customer.'_admingroup',
+                $customer.'_admingroup_en',
                 $customer.'_usergroup',
                 ),
             // 'write'         => array(),
@@ -222,7 +219,7 @@ $config['vcmp']['pages']['home'] = array(
             'description'   => 'Ladda upp filer till Mediabanken.',
             'read'          => array(
                 $internal.'_sysadmingroup',
-                $customer.'_admingroup',
+                $customer.'_admingroup_en',
             	$customer.'_admingroup_fi',
             ),
             // 'write'         => array(),
@@ -258,3 +255,46 @@ $config['vcmp']['pages']['home']['content']['visma'] = null;
 
 // Hide Webshop Finnish
 // $config['vcmp']['pages']['home']['content']['webshop_fi'] = null;
+
+
+$workflow_request_url = '/PORTAL/BROWSE.php'.
+                        '?path=/store/design_studio/Customers/Demokunden/_WORKFLOW'.
+                        '%26set_base_path=true'.
+                        '%26site=brandeasy';
+
+$mediabank_request_url = '/PORTAL/BROWSE.php'.
+                            '?path=/store/archive/develop/BrandEasyCustomers/demokunden/_MEDIABANK'.
+                            '%26set_base_path=true'.
+                            '%26additional_base_paths=/store/archive/develop/BrandEasyCustomers/demokunden/_INBOX'.
+                            '%26site=brandeasy';
+
+// Mediabank vcmp-configuration
+$config['integrations']['mediabank'] = array(
+        'name' => '',
+        'iframe_url' => $design_studio_url,
+        'queries' => array(
+            'credentials' => true,
+            'request_url' => $mediabank_request_url,
+        ),
+        'iframe_resizer' => false,
+        'container' => false,
+        'class' => 'iframe-full',
+ );
+
+
+// Mediabank vcmp-configuration
+$config['integrations']['workflow'] = array(
+        'name' => '',
+        'iframe_url' => $design_studio_url,
+        'queries' => array(
+            'credentials' => true,
+            'request_url' => $workflow_request_url,
+        ),
+        'iframe_resizer' => false,
+        'container' => false,
+        'class' => 'iframe-full',
+ );
+
+
+
+
