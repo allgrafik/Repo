@@ -1,0 +1,52 @@
+// ==================================================
+// Brand Easy customer styling (styling.less)
+// ==================================================
+
+// Load application and Brand Easy default styling
+@import '/var/www/html/brandeasy/site/assets/less/templates/brandeasy-@{theme}.less';
+
+// --------------------------------------------------
+// 1. Customer base settings
+// --------------------------------------------------
+
+// Customer name (should be same as directory name)
+@customerName: mickeyskitchen;
+
+@theme: light;
+// --------------------------------------------------
+// 2. Customer custom variables
+@logoWidth: 109px;
+@logoHeight: 50px;
+
+// Background color
+@backgroundColor: #111;
+
+// Primary color (links)
+@primaryColor: #e95055;
+
+// Secondary color (headers)
+@secondaryColor: #e95055;
+
+// Border radius (curved corners, 0px or 4-6px is optimal)
+@borderRadius: 0px;
+
+// Background image
+@bodyBackgroundImage: url('background.png');
+
+// Logotype (left corner)
+@ms2SiteLogoPrimary: url('logo.png');
+
+// Color of files to be uploaded
+@uploadTextColor: black;
+
+// --------------------------------------------------
+
+// You can copy variables from mediastore-variables.less or
+// customer-variables.less and replace their values here.
+
+.page-top {
+    border-bottom: 1px solid #ddd;
+}
+.site-header {
+    border-bottom: 0;
+}

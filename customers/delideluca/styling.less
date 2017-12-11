@@ -1,0 +1,48 @@
+// ==================================================
+// Brand Easy customer styling (styling.less)
+// ==================================================
+
+// Load application and Brand Easy default styling
+@import '/var/www/html/brandeasy/site/assets/less/templates/brandeasy-@{theme}.less';
+
+// --------------------------------------------------
+// 1. Customer base settings
+// --------------------------------------------------
+
+// Customer name (should be same as directory name)
+@customerName: 'delideluca';
+
+// Theme (light or dark)
+@theme: light;
+
+// Logo width & height (max 180px & 50px)
+@logoWidth: 119px;
+@logoHeight: 50px;
+
+// Background color
+@backgroundColor: white;
+
+// Primary color (links)
+@primaryColor: #ba0c2f;
+
+// Secondary color (headers)
+@secondaryColor: black;
+
+// Border radius (curved corners, 0px or 4-6px is optimal)
+@borderRadius: 0px;
+
+// Show message field on File Upload page, value should be 'block' to show or 'none' to hide
+// @showUploadMessageField: block;
+
+// --------------------------------------------------
+// 2. Customer custom variables
+// --------------------------------------------------
+
+.site-header .top-header .page-logo {
+	background-image: url('logo.png');
+}
+.page-top { border-bottom: 1px solid #ddd; }
+.site-header { border-bottom: 0; }
+
+// You can copy variables from mediastore-variables.less or 
+// customer-variables.less and replace their values here.
